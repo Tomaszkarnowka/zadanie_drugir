@@ -1,8 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import Messages from "./messages";
 
-export default function Login() {
+export default function SignUp() {
   return (
     <div className="flex items-center justify-center ">
       <div className="bg-neutral-content rounded-md max-w-lg shadow-lg relative w-96">
@@ -14,11 +13,11 @@ export default function Login() {
         <div className="p-5">
           <form
             className="flex flex-col w-full text-foreground"
-            action="/auth/sign-in"
+            action="/auth/sign-up"
             method="post"
           >
             <h3 className="text-xl font-medium text-base-300 ">
-              Sign in to our platform
+              Sign Up to our platform
             </h3>
             <label className="text-md text-base-300" htmlFor="email">
               Email
@@ -39,15 +38,10 @@ export default function Login() {
               placeholder="••••••••"
               required
             />
-            <button className="btn btn-outline btn-primary">Sign In</button>
-            <Messages />
-          </form>
-          <div className="flex flex-col">
-            <p className="text-black">First time here?</p>
-            <Link href="/signup" className="btn btn-outline btn-primary">
+            <button className="bg-accent-focus rounded px-4 py-2 text-base-300 mb-2">
               Sign Up
-            </Link>
-          </div>
+            </button>
+          </form>
         </div>
       </div>
     </div>
